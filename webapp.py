@@ -24,27 +24,24 @@ def startOver():
     
     return redirect('/')
 
-@app.route('/page1')
+@app.route('/page1',methods=['GET','POST'])
 def renderPage1():
+    #TODO: sale the first and last name in the session
+    session["answer1"] = request.form["question1"]
+    results["answer1"] = session["answer1"]
     return render_template('page1.html')
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    #TODO: save the first and last name in the session
-    session["answer1"] = request.form["question1"]
-    results["answer1"] = session["answer1"]
-    return render_template('page2.html')
-
-@app.route('/page3',methods=['GET','POST'])
-def renderPage3():
     #TODO: save the favorite color in the session
     session["answer2"] = request.form["question2"]
     results["answer2"] = session["answer2"]
-    return render_template('page3.html')
+    return render_template('page2.html')
   
-@app.route('/page4',methods=['GET','POST'])
-def renderPage4():
-    return render_template('page4.html')
+@app.route('/page3',methods=['GET','POST'])
+def renderPage3():
+    return render_template('page3.html')
     
 if __name__=="__main__":
     app.run(debug=False)
+ca41afb-16fed1c10f3-3c84198b-1
