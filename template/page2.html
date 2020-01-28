@@ -3,11 +3,15 @@
 {% block title %}Page 2: Ask for your favorite color{% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Page 2: What is ________?</h1>
 
  <form action="/page3" method="POST">
-  Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+  Question One:<br>
+  <input type="radio" name="question2" value="1">
+  <input type="radio" name="question2value="2">
+  <input type="radio" name="question2 value="3">
+  <input type="radio" name="question2 value="4">
+  <br>
   <input type="submit" value="Submit">
  </form> 
 
