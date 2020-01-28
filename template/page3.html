@@ -1,1 +1,16 @@
+{% extends "layout.html" %}
 
+{% block title %}Page 3--Now we know everything!{% endblock %}
+
+{% block content %}
+  <h1>Now I know:</h1>
+
+<ul>
+ <li> Your first name is: {{session["first_name"]}} </li>
+ <li> Your last name is: {{session["last_name"]}} </li>
+ <li> Your favorite color is: {{session["favorite_color"]}} </li>
+</ul>
+
+
+
+{% endblock %}
