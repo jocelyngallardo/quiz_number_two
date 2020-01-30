@@ -1,14 +1,12 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 3--Now we know everything!{% endblock %}
+{% block title %}Results{% endblock %}
 
 {% block content %}
-  <h1>Now I know:</h1>
-
+  <h1>Here are your results:</h1>
+<form action="/page3" method="POST">
 <ul>
  <li><p1> {{response}} </p1></li>
 </ul>
-
-
-
+</form>
 {% endblock %}
