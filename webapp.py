@@ -1,4 +1,3 @@
-Learn more or give us feedback
 import os
 from flask import Flask, url_for, render_template, request
 from flask import redirect
