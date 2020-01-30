@@ -41,10 +41,10 @@ def renderPage3():
   results["answer2"] = session["answer2"]
   response = ""
   for key in results:
-    if results[key] == answer[key]:
+    if results[key] == answers[key]:
       response += "Correct! You're a wizard, Harry."
     else:
-      response += "You chose" + results[key] + ". The correct answer is: " + answer[key] + "."
+      response += "You chose" + results[key] + ". The correct answer is: " + answers[key] + "."
     return render_template('page3.html', response = response)
     
 if __name__=="__main__":
