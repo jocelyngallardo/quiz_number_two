@@ -26,19 +26,19 @@ def startOver():
 @app.route('/page1',methods=['GET','POST'])
 def renderPage1():
     #TODO: sale the first and last name in the session
-    session["answer1"] = request.form["question1"]
-    results["answer1"] = session["answer1"]
     return render_template('page1.html')
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: save the favorite color in the session
-    session["answer2"] = request.form["question2"]
-    results["answer2"] = session["answer2"]
+    session["answer1"] = request.form["question1"]
+    results["answer1"] = session["answer1"]
     return render_template('page2.html')
   
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
+  session["answer2"] = request.form["question2"]
+  results["answer2"] = session["answer2"]
   response = ""
   for key in results:
     if results[key] == answer[key]:
