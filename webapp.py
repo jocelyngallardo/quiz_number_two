@@ -47,7 +47,7 @@ def renderPage3():
       response += "Correct! You're a wizard, Harry."
     else:
       response += "You chose" + results[key] + ". The correct answer is: " + answer[key] + "."
-    return render_template('page3.html')
+    return render_template('page3.html', response = response)
     
 if __name__=="__main__":
     app.run(debug=False)
