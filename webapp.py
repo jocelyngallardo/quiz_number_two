@@ -37,7 +37,7 @@ def renderPage2():
 def renderPage3():
   session["answer2"] = request.form["question2"]
   response = ""
-  for key in results:
+  for key in session:
     if session[key] == answers[key]:
       response += "Correct! You're a wizard, Harry."
     else:
