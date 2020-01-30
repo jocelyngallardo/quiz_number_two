@@ -15,7 +15,7 @@ app.secret_key=os.environ["SECRET_KEY"]; #SECRET_KEY is an environment variable.
 results = {"answer1":"", "answer2":""}
 answers = {"answer1":"1", "answer2":"3"}
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def renderMain():
     return render_template('home.html')
 
@@ -23,7 +23,7 @@ def renderMain():
 #def startOver():
     #TODO: delete everything from the session
     
-    return redirect('/')
+    #return redirect('/')
 
 @app.route('/page1',methods=['GET','POST'])
 def renderPage1():
