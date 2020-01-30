@@ -1,11 +1,9 @@
 body {
-
-    background-color: #ffffcc;
+    background-color: #e1f7f0;
     color: black;
 }
 
-div#footer {
-    
+div#footer { 
     font-size: 0.8em;
     background-color: #ccffff;
     border: 4px solid grey;
