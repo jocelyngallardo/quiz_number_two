@@ -41,7 +41,7 @@ def renderPage3():
     if session[key] == answers[key]:
       response += "Correct! You're a wizard, Harry."
     else:
-      response += "You chose" + session[key] + ". The correct answer is: " + answers[key] + "."
+      response += "You chose " + session[key] + ". The correct answer is: " + answers[key] + "." + \n
   return render_template('page3.html', response = response)
     
 if __name__=="__main__":
