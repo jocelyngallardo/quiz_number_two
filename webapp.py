@@ -19,8 +19,8 @@ answers = {"answer1":"1", "answer2":"3"}
 def renderMain():
     return render_template('home.html')
 
-@app.route('/startOver')
-def startOver():
+#@app.route('/startOver')
+#def startOver():
     #TODO: delete everything from the session
     
     return redirect('/')
