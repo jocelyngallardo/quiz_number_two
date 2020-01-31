@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app.secret_key=os.environ["SECRET_KEY"]; #SECRET_KEY is an environment variable.  
                                          #The value should be set in Heroku (Settings->Config Vars).  
-answers = {"answer1":"Feet", "answer2":"Blue"}
+answers = {"answer1":"Feet", "answer2":"Blue", "answer3":"Bats"}
 
 @app.route('/', methods=['GET','POST'])
 def renderMain():
