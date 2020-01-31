@@ -41,7 +41,7 @@ def renderPage3():
     if session[key] == answers[key]:
       response += Markup("<li>" + "Correct! You're a wizard, Harry." + "</li>")
     else:
-      response += Markup("<li>" + "You chose " + session[key] + ". The correct answer is: " + answers[key] + "." + "</li>")
+      response += Markup("<li>" + "You chose: " + session[key] + ". The correct answer is: " + answers[key] + "." + "</li>")
   return render_template('page3.html', response = response)
     
 if __name__=="__main__":
