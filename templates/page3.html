@@ -1,12 +1,21 @@
+
 {% extends "format.html" %}
 
-{% block title %}Results{% endblock %}
+{% block title %}Page 3{% endblock %}
 
 {% block content %}
-  <h1>Here are your results (in order of appearance):</h1>
-<form action="/page3" method="POST">
-<ul>
- <p1> {{response}} </p1>
-</ul>
-</form>
+  <h1>Which animal is killed by wind turbines?</h1>
+
+ <form action="/page4" method="POST">
+  Question Two:<br>
+  <input type="radio" name="question3" value="Cats"> Cats <br>
+  <input type="radio" name="question3" value="Turtles"> Turtles <br>
+  <input type="radio" name="question3" value="Whales"> Whales <br>
+  <input type="radio" name="question3" value="Bats"> Bats
+  <br>
+  <input type="submit" value="Submit">
+ </form> 
+
+
+
 {% endblock %}
