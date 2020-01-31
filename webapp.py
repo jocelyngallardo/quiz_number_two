@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app.secret_key=os.environ["SECRET_KEY"]; #SECRET_KEY is an environment variable.  
                                          #The value should be set in Heroku (Settings->Config Vars).  
-answers = {"answer1":"Feet", "answer2":"Blue", "answer3":"Bats"}
+answers = {"answer1":"Feet", "answer2":"Blue", "answer3":"Bats", "answer4":"Bats"}
 
 @app.route('/', methods=['GET','POST'])
 def renderMain():
@@ -45,12 +45,21 @@ def renderPage2():
       session["answer2"] != request.form["question2"]
     return render_template('page3.html')
   
-@app.route('/page4',methods=['GET','POST'])
-def renderPage4():
-  if not "answer3" in session:
-    session["answer3"] = request.form["question3"]
+  @app.route('/page4',methods=['GET','POST'])
+  def renderPage4():
+    #TODO: save the favorite color in the session
+    if not "answer3" in session:
+      session["answer3"] = request.form["question3"]
+    else:
+      session["answer3"] != request.form["question3"]
+    return render_template('page4.html')
+  
+@app.route('/page5',methods=['GET','POST'])
+def renderPage5():
+  if not "answer4" in session:
+    session["answer4"] = request.form["question4"]
   else:
-    session["answer3"] != request.form["question3"]
+    session["answer4"] != request.form["question4"]
     
   response = ""
   for key in session:
@@ -58,7 +67,7 @@ def renderPage4():
       response += Markup("<li>" + "Correct! You're a wizard, Harry." + "</li>")
     else:
       response += Markup("<li>" + "You chose: " + session[key] + ". The correct answer is: " + answers[key] + "." + "</li>")
-  return render_template('page4.html', response = response)
+  return render_template('page5.html', response = response)
     
 if __name__=="__main__":
     app.run(debug=False)
