@@ -19,7 +19,7 @@ def renderMain():
 
 @app.route('/startOver')
 def startOver():
-    #TODO: delete everything from the session
+    
     return redirect('/')
 
 @app.route('/page1',methods=['GET','POST'])
