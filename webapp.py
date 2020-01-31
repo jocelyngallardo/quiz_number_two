@@ -36,8 +36,8 @@ def renderPage2():
       session["answer1"] != request.form["question1"]
     return render_template('page2.html')
   
- @app.route('/page3',methods=['GET','POST'])
- def renderPage3():
+@app.route('/page3',methods=['GET','POST'])
+def renderPage3():
     #TODO: save the favorite color in the session
     if not "answer2" in session:
       session["answer2"] = request.form["question2"]
@@ -45,8 +45,8 @@ def renderPage2():
       session["answer2"] != request.form["question2"]
     return render_template('page3.html')
   
-  @app.route('/page4',methods=['GET','POST'])
-  def renderPage4():
+@app.route('/page4',methods=['GET','POST'])
+def renderPage4():
     #TODO: save the favorite color in the session
     if not "answer3" in session:
       session["answer3"] = request.form["question3"]
