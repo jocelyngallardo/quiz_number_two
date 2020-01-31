@@ -1,1 +1,20 @@
+{% extends "format.html" %}
 
+{% block title %}Page 4{% endblock %}
+
+{% block content %}
+  <h1>How many Horcruxes are there?</h1>
+
+ <form action="/page5" method="POST">
+  Question Two:<br>
+  <input type="radio" name="question4" value="7"> 7 <br>
+  <input type="radio" name="question4" value="2"> 2 <br>
+  <input type="radio" name="question4" value="What is a Horcrux?"> What is a Horcrux? <br>
+  <input type="radio" name="question4" value="Obviously 100"> Obviously 100
+  <br>
+  <input type="submit" value="Submit">
+ </form> 
+
+
+
+{% endblock %}
