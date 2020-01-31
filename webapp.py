@@ -46,7 +46,7 @@ def renderPage2():
     return render_template('page3.html')
   
 @app.route('/page4',methods=['GET','POST'])
-def renderPage3():
+def renderPage4():
   if not "answer3" in session:
     session["answer3"] = request.form["question3"]
   else:
