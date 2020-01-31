@@ -30,12 +30,19 @@ def renderPage1():
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: save the favorite color in the session
-    session["answer1"] = request.form["question1"]
+    if not "answer1" in session:
+      session["answer1"] = request.form["question1"]
+    else:
+      session["answer1"] != request.form["question1"]
     return render_template('page2.html')
   
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-  session["answer2"] = request.form["question2"]
+  if not "answer2" in session:
+    session["answer2"] = request.form["question2"]
+  else:
+    session["answer2"] != request.form["question2"]
+    
   response = ""
   for key in session:
     if session[key] == answers[key]:
